@@ -54,16 +54,10 @@
                     <div class="ad-check col-4">
                         <label class="form-check-label" for="exampleCheck1">Ad type</label>
                         <ul>
-                            <li>
-                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                <label class="form-check-label" for="exampleCheck1">For sale</label>
-                            </li>
-                            <li>
-                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                <label class="form-check-label" for="exampleCheck1">Sold</label>
-                            </li>
-
-
+                            <input type="radio" id="for_sale" name="ad_type" value="sale">
+                            <label for="for_sale">For sale</label><br>
+                            <input type="radio" id="for_sold" name="ad_type" value="sold">
+                            <label for="for_sold">sold</label><br>
                         </ul>
                     </div>
                 </div>
