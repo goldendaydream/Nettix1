@@ -63,7 +63,37 @@
                 </div>
 
             </div>
+            <div class="model">
+                <div class="model-header">
+                    <h2>Make & Model</h2>
+                    <input type="radio" name="model_get" value="get">Just get these
+                    <input type="radio" name="model_get" value="remove">Remove these from the search results
+                </div>
+                <div class="model-body row">
+                    <div class="col-4" id="select_brand">
+                        <label for="brand">Select Brand</label>
+                    </div>
+                    <div class="col-4">
+                        <label for="template">Select Template</label>
+                    </div>
+                    <div class="col-4">
+                        <label for="selected_model">Selected brands & models</label>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
 @endsection
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $(function () {
+            $.ajax({
+                url:'https://api.nettix.fi/rest/car/options/vehicleType',
+                method:'get',
+                success:function (data) {
+                    console.log(data)
+                }
+            })
+        })
+    </script>
